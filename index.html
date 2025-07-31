@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandler Cord - DevOps & SRE Consultant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(200, 200, 200, 0.1) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+            background-size: 2rem 2rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white">Chandler Cord</a>
+                </div>
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#services" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#services" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#skills" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="#experience" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 md:py-32 bg-grid">
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/80 to-gray-900"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+                    Expert in Kubernetes, Terraform, <br class="hidden md:block">
+                    <span class="text-cyan-400">Azure, GCP, and Helm.</span>
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
+                    Lead Global Site Reliability Engineer with over 15 years of experience managing enterprise-level applications across cloud and on-premise environments.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="#contact" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                        Get in Touch
+                    </a>
+                    <a href="#services" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-transform transform hover:scale-105">
+                        My Services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center">
+                    <h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">About Me</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Accomplished Site Reliability Engineering Leader
+                    </p>
+                    <p class="mt-4 max-w-3xl text-xl text-gray-400 lg:mx-auto">
+                        My expertise lies in automating complex hybrid infrastructures, implementing security and compliance governance best practices, and optimizing performance management. With a proficiency in a wide array of tools and technologies, I have a proven track record of successfully designing self-aware monitoring backends, streamlining instance spin-up, and achieving SOC-1, SOC-2, and FedRamp compliance certifications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-800 bg-grid">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center">
+                    <h2 class="text-base text-cyan-400 font-semibold tracking-wide uppercase">Bespin Cloud Consulting</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Expertise in all things infrastructure
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-400 lg:mx-auto">
+                        Leverage my expertise in architecture, design, implementation, automation, and monitoring to elevate your infrastructure.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-cyan-500 text-white">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-medium text-white">Security & Compliance</h3>
+                        <p class="mt-2 text-base text-gray-400">
+                            Develop and implement security and compliance governance best practices. Achieve certifications like SOC-1, SOC-2, and FedRamp with proven strategies.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-cyan-500 text-white">
+                            <i data-lucide="cloud-cog"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-medium text-white">Multi-Cloud Management</h3>
+                        <p class="mt-2 text-base text-gray-400">
+                            Manage and optimize complex Kubernetes environments across AKS and GKE. Implement cost reduction initiatives that deliver measurable savings, like reducing monthly cloud spend by over 30%.
+                        </p>
+                    </div>
+                    <div class="bg-gray-900 p-6 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-cyan-500 text-white">
+                            <i data-lucide="gauge-circle"></i>
+                        </div>
+                        <h3 class="mt-5 text-lg font-medium text-white">Reliability & Monitoring</h3>
+                        <p class="mt-2 text-base text-gray-400">
+                            Design self-aware monitoring backends and create meaningful dashboards for telemetry and infrastructure health to proactively identify performance constraints and bottlenecks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-white text-center">Core Technologies & Skills</h2>
+                <div class="mt-10 flow-root">
+                    <div class="-m-2 flex flex-wrap justify-center gap-4">
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Google Cloud Platform (GCP)</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Azure</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">AWS</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Kubernetes</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Terraform</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Helm</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Docker</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">CI/CD</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Chef</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Puppet</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">ELK Stack</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Python</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Bash</span>
+                        <span class="inline-flex items-center rounded-full bg-gray-700 px-4 py-2 text-sm font-medium text-cyan-300">Server Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-white text-center mb-12">Professional Experience</h2>
+                <div class="max-w-3xl mx-auto">
+                    <!-- Experience Item 1 -->
+                    <div class="relative pl-8 sm:pl-12 py-6 group">
+                        <div class="absolute top-5 left-0 w-px h-full bg-gray-600 group-last:h-0"></div>
+                        <div class="absolute top-5 left-[-9px] w-5 h-5 bg-cyan-500 rounded-full border-4 border-gray-800"></div>
+                        <h3 class="text-xl font-bold text-white">Site Reliability Engineer III - Forcepoint</h3>
+                        <p class="text-sm text-gray-400 mb-2">May 2024 - Present</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>Monitoring, measuring, and improving the reliability, availability, and scalability of our global infrastructure, applications, and services.</li>
+                            <li>Engaging in incident response activities and conducting post-mortem analyses to investigate root causes.</li>
+                            <li>Creating meaningful dashboards for application telemetry and infrastructure health.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience Item 2 -->
+                    <div class="relative pl-8 sm:pl-12 py-6 group">
+                         <div class="absolute top-5 left-0 w-px h-full bg-gray-600 group-last:h-0"></div>
+                        <div class="absolute top-5 left-[-9px] w-5 h-5 bg-cyan-500 rounded-full border-4 border-gray-800"></div>
+                        <h3 class="text-xl font-bold text-white">Senior Site Reliability Engineer - Sight Machine</h3>
+                        <p class="text-sm text-gray-400 mb-2">Oct 2022 - May 2024</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>Managed 30+ Kubernetes clusters in AKS and GKE, utilizing Terraform, Atlantis, FluxCD, and Helm.</li>
+                            <li>Spearheaded Azure infrastructure cost reduction initiative, reducing monthly cloud spend by over 30%.</li>
+                            <li>Principal member of the Security Committee, moving toward SOC-2 compliance.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience Item 3 -->
+                    <div class="relative pl-8 sm:pl-12 py-6 group">
+                         <div class="absolute top-5 left-0 w-px h-full bg-gray-600 group-last:h-0"></div>
+                        <div class="absolute top-5 left-[-9px] w-5 h-5 bg-cyan-500 rounded-full border-4 border-gray-800"></div>
+                        <h3 class="text-xl font-bold text-white">Lead DevSecOps Engineer - OutSystems</h3>
+                        <p class="text-sm text-gray-400 mb-2">Jan 2021 - Oct 2022</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>Developed Security and Compliance governance best practices through policies/education/monitoring.</li>
+                            <li>Implemented CloudAware as a CMDB, compliance engine, and cost management tool across AWS/GCP/Azure.</li>
+                            <li>Analyzed and refactored IAM policies across 1800+ AWS accounts.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience Item 4 -->
+                    <div class="relative pl-8 sm:pl-12 py-6 group">
+                         <div class="absolute top-5 left-0 w-px h-full bg-gray-600 group-last:h-[calc(100%-2.5rem)]"></div>
+                        <div class="absolute top-5 left-[-9px] w-5 h-5 bg-cyan-500 rounded-full border-4 border-gray-800"></div>
+                        <h3 class="text-xl font-bold text-white">DevOps Guy - Authentic8</h3>
+                        <p class="text-sm text-gray-400 mb-2">Dec 2017 - Dec 2020</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-1">
+                            <li>Initial lead engineer inside the newly created Network/Security Operations Center (NSOC).</li>
+                            <li>Designed self-aware Icinga2 monitoring backend across bare metal, MSP, AWS, and GCP.</li>
+                             <li>Instrumental in moving the organization toward SOC-1, SOC-2, and FedRamp compliance certifications.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-lg mx-auto text-center">
+                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Let's Connect</h2>
+                    <p class="mt-4 text-lg text-gray-400">
+                        Have a project in mind or just want to discuss the future of infrastructure? I'd love to hear from you.
+                    </p>
+                    <p class="mt-8">
+                        <a href="mailto:chandlercord@gmail.com" class="text-xl font-medium text-cyan-400 hover:text-cyan-300">
+                            chandlercord@gmail.com
+                        </a>
+                    </p>
+                    <div class="mt-6 flex justify-center space-x-6">
+                        <a href="https://www.linkedin.com/in/chandlercord" target="_blank" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">LinkedIn</span>
+                            <i data-lucide="linkedin" class="h-6 w-6"></i>
+                        </a>
+                        <a href="https://github.com/chandlercord/" target="_blank" class="text-gray-400 hover:text-white">
+                            <span class="sr-only">GitHub</span>
+                            <i data-lucide="github" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="container mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2024 Chandler Cord. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = mobileMenuButton.querySelector('svg:first-child');
+        const menuIconClose = mobileMenuButton.querySelector('svg:last-child');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = mobileMenu.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIconOpen.classList.remove('hidden');
+                menuIconClose.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
