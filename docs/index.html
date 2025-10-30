@@ -40,10 +40,11 @@
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <!-- FIX: Added classes to SVGs for more reliable selection -->
+                        <svg class="block h-6 w-6 menu-icon-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <svg class="hidden h-6 w-6 menu-icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
@@ -236,8 +237,9 @@
                         Have a project in mind or just want to discuss the future of infrastructure? I'd love to hear from you.
                     </p>
                     <p class="mt-8">
-                        <a href="mailto:chandlercord@gmail.com" class="text-xl font-medium text-cyan-400 hover:text-cyan-300">
-                            chandlercord@gmail.com
+                        <!-- CORRECTED EMAIL HERE -->
+                        <a href="mailto:chandler@bespincloudconsulting.com" class="text-xl font-medium text-cyan-400 hover:text-cyan-300">
+                            chandler@bespincloudconsulting.com
                         </a>
                     </p>
                     <div class="mt-6 flex justify-center space-x-6">
@@ -269,24 +271,37 @@
         // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuIconOpen = mobileMenuButton.querySelector('svg:first-child');
-        const menuIconClose = mobileMenuButton.querySelector('svg:last-child');
+        
+        // FIX: Select icons by class to prevent errors if the button structure changes
+        const menuIconOpen = mobileMenuButton.querySelector('.menu-icon-open');
+        const menuIconClose = mobileMenuButton.querySelector('.menu-icon-close');
 
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIconOpen.classList.toggle('hidden');
-            menuIconClose.classList.toggle('hidden');
+            // Check if elements exist before toggling classes
+            if (mobileMenu) {
+                mobileMenu.classList.toggle('hidden');
+            }
+            if (menuIconOpen && menuIconClose) {
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+            }
         });
 
-        // Close mobile menu when a link is clicked
+        // Close mobile menu when a nav link is clicked
         const mobileNavLinks = mobileMenu.querySelectorAll('a');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                menuIconOpen.classList.remove('hidden');
-                menuIconClose.classList.add('hidden');
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+                if (menuIconOpen && menuIconClose) {
+                    menuIconOpen.classList.remove('hidden');
+                    menuIconClose.classList.add('hidden');
+                }
             });
         });
     </script>
 </body>
 </html>
+
+
